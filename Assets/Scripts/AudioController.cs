@@ -7,6 +7,7 @@ public class AudioController : MonoBehaviour
     //All the audio sources
 
     [Header("Audio Sources")]
+    [Header("Octave 4/5")]
     [SerializeField] AudioSource _c4;
     [SerializeField] AudioSource _d4;
     [SerializeField] AudioSource _e4;
