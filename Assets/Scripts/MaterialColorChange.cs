@@ -15,46 +15,80 @@ public class MaterialColorChange : MonoBehaviour
     [SerializeField] Material _m8;
 
 
+    private void Start()
+    {
+        _m1.color = new Color(255, 255, 255);
+        _m2.color = new Color(255, 255, 255);
+        _m3.color = new Color(255, 255, 255);
+        _m4.color = new Color(255, 255, 255);
+        _m5.color = new Color(255, 255, 255);
+        _m6.color = new Color(255, 255, 255);
+        _m7.color = new Color(255, 255, 255);
+        _m8.color = new Color(255, 255, 255);
+    }
+
+
     // Update is called once per frame
     void Update()
     {
-        Material gm = GetComponent<Renderer>().material;
 
         //première main
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q))
         {
-            gm.SetColor("_color", Color.red);
+            _m1.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            gm.SetColor("_color", Color.red);
+            _m2.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
 
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            gm.SetColor("_color", Color.red);
+            _m3.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKey(KeyCode.C))
         {
-            gm.SetColor("_color", Color.red);
+            _m4.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
 
         //seconde main
-        if (Input.GetKeyDown(KeyCode.Comma))
+        if (Input.GetKey(KeyCode.Comma))
         {
-
+            _m5.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKey(KeyCode.K))
         {
-
+            _m6.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.L))
         {
-
+            _m7.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKey(KeyCode.M))
         {
-
+            _m8.color = new Color(255, 0, 0);
+            Invoke("ResetColor", 0.5f);
         }
+    }
+
+
+
+    private void ResetColor()
+    {
+        _m1.color = new Color(255, 255, 255);
+        _m2.color = new Color(255, 255, 255);
+        _m3.color = new Color(255, 255, 255);
+        _m4.color = new Color(255, 255, 255);
+        _m5.color = new Color(255, 255, 255);
+        _m6.color = new Color(255, 255, 255);
+        _m7.color = new Color(255, 255, 255);
+        _m8.color = new Color(255, 255, 255);
     }
 }

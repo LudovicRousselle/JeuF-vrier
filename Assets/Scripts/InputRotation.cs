@@ -20,39 +20,59 @@ public class InputRotation : MonoBehaviour
     void Update()
     {
         //première main
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            toucheDo.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheDo.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            toucheRe.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheRe.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            toucheMi.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheMi.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            toucheFa.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheFa.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
 
         //seconde main
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            toucheSol.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheSol.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            toucheLa.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheLa.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
-        if (Input.GetKey(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            toucheSi.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheSi.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            toucheDo2.transform.rotation = Quaternion.Euler(-1, 0, 0);
+            toucheDo2.transform.Rotate(3f, 0, 0, Space.Self);
+            Invoke("ResetRotation", 1f);
         }
+    }
+
+    private void ResetRotation()
+    {
+        toucheDo.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheRe.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheMi.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheFa.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheSol.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheLa.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheSi.transform.eulerAngles = new Vector3(-90, 0, 0);
+        toucheDo2.transform.eulerAngles = new Vector3(-90, 0, 0);
     }
 }
