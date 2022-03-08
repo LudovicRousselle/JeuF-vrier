@@ -24,7 +24,7 @@ public class InputRotation : MonoBehaviour
         //première main
         if (Input.GetKey(KeyCode.A))
         {
-            toucheDo.transform.rotation = newRotation;
+            toucheDo.transform.rotation = Quaternion.Euler(newRotation);
         }
         if (Input.GetKey(KeyCode.Z))
         {

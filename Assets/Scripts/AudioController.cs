@@ -7,7 +7,8 @@ public class AudioController : MonoBehaviour
     //All the audio sources
 
     [Header("Audio Sources")]
-    [Header("Octave 4/5")]
+
+    [Header("Piano Octave 4/5")]
     [SerializeField] AudioSource _c4;
     [SerializeField] AudioSource _d4;
     [SerializeField] AudioSource _e4;
@@ -17,17 +18,25 @@ public class AudioController : MonoBehaviour
     [SerializeField] AudioSource _b4;
     [SerializeField] AudioSource _c5;
 
+    [Header("Percu")]
+    [SerializeField] AudioSource _kick;
+    [SerializeField] AudioSource _kick2;
+    [SerializeField] AudioSource _yeah;
+    [SerializeField] AudioSource _snare;
+    [SerializeField] AudioSource _snare2;
+    [SerializeField] AudioSource _hH;
+    [SerializeField] AudioSource _hH2;
+    [SerializeField] AudioSource _shaker;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+
+
+
+        //PIANO
+
         //première main
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -62,6 +71,45 @@ public class AudioController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             _c5.Play();
+        }
+
+
+        //PERCU
+
+        //première main
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _kick.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _kick2.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            _yeah.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            _shaker.Play();
+        }
+
+        //seconde main
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            _snare.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            _snare2.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            _hH.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            _hH2.Play();
         }
     }
 }
