@@ -15,8 +15,6 @@ public class InputRotation : MonoBehaviour
     [SerializeField] GameObject toucheSi;
     [SerializeField] GameObject toucheDo2;
 
-    [Header("rotation")]
-    [SerializeField] Vector3 newRotation = new Vector3(-10, 0, 0);
 
     // Update is called once per frame
     void Update()
@@ -24,7 +22,7 @@ public class InputRotation : MonoBehaviour
         //première main
         if (Input.GetKey(KeyCode.A))
         {
-            toucheDo.transform.rotation = Quaternion.Euler(newRotation);
+            toucheDo.transform.rotation = Quaternion.Euler(-1, 0, 0);
         }
         if (Input.GetKey(KeyCode.Z))
         {
